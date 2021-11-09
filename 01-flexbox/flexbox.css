@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+}
+
+.item {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid black;
+    background-color: #dfdfdf;
+}
+
+.item1 {
+    height: 100px;
+}
+
+.item2 {
+    height: 50000px;
+}
+
+.item3 {
+    height: 300px;
+}

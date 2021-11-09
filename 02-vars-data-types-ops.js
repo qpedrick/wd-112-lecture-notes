@@ -194,79 +194,76 @@ console.log(typeof student)
 
 // Operators
 
-//Assignment Operator
-//Assigns a value to the declaration (not "equal", but "is")
+// Assignment Operator
+// Assigns a value to the declaration (not "equal", but "is")
 
 let r = 5;
 
-//Comparison Operators
+// Comparison Operators
 /*
     Compare values on either side of the operator
-        -returns either a true or false
+        - returns either a true or false
 */
 
-//equal to operator
-console.log( 3 == 5 ) //returns false
+// Equal to operator
+console.log(3 == 3); // returns true
 
-//not equal to
-console.log( 3 != 5 ) //returns true
-console.log( 3 == "3" ) //returns true
+// Not equal to
+console.log(3 != 5); // return true because 3 is not equal to 5
 
-//Type Coercion
+
+// Type Coercion
 /*
     Process of converting one data type into another
-    done automatically by the JS parser
+    Done automatically by the JS parser.
 */
 
-console.log(3 == "3") //returns true because JS changes str data type to int data type before comparison operation
+console.log(3 == "3"); // returns true becase JS changes str data type to int data type before comparison operation. 
 
-//Strict Equal or not equal operators
-//Test for not only value but also data type
+// Strict Equal or Not Equal Operators
+// Tests for not only value but it's data type.
 
-console.log(3 === 3) //returns true because value & data type match
+console.log(3 === 3); // returns true because value & data type is same
 
-console.log(3 === "3") //returns false
+console.log(3 === "3"); // returns false because data types are different (int and str)
 
-console.log(3 !== "3") //true
+console.log(3 !== "3"); // returns true because data types of both values differ
 
-//Greater; Less; Greater & Equal; Less & Equal
+// Greater; Less; Greater & Equal; Less & Equal
 
-console.log( 5 > 3)  //true
+console.log(5 > 3); // returns true
 
-console.log( 5 >= 5) //true
+console.log(5 >= 5); // returns true
 
-console.log( 1 <= 0) //flase
+console.log(1 < 0); // returns false
 
-console.log( 0 < "1" ) //true because type coercion
+console.log(0 < "1"); // returns true because type coercion exists in these operators as well
 
-//Logical Operators NOT AND OR
+// Logical Operators NOT AND OR
 
 /*
-    AND operator ( && )
-        -true if both are true
-    OR operator ( || )
-        -true if one or the other is true
-    NOT operator ( ! )
-        -flips result
+    AND Operator (&&)
+        - true if both values result to true
+    OR Operator (||)
+        - true if one or the other value results in true
+    NOT Operator (!)
+        - flips the resulting logical operation
 */
 
-let x = 5;
-let y = 7;
+console.log(5 < 10 && 7 < 10) // true; both sides are true
+console.log(5 < 1 && 7 < 10) // false; left side is false, right is true so overall false & true is false
 
-console.log( x < 1 && y < 10)
+console.log(5 < 10 || 7 < 10) // true; because both sides are true (only one needs to be true for OR)
 
-console.log(5 < 10 && 7 < 10) // true
-console.log(5 < 1 && 7 < 10) //false
+console.log(5 < 1 || 7 < 10)
+        // false  || true   // returns true because one of the sides remains true
 
-console.log( 5 < 10 || 7 < 10) // true
+console.log(5 < 1 || 7 > 10) // returns false (none is true)
+         // false || false  
 
-console.log( 5 < 1 || 7 < 10) // true
+console.log(!(7 == 10)) // returns true because it flips the falsey value into truthy
 
-console.log(5 < 1 || 7 > 10) //false
-
-console.log(!(7 == 10)) //true
-
-// Add, Stubtract, Multiply, Divide
+// Add, Substract, Multiply, Divide
 
 console.log(5 + 5);
 console.log(5 - 5);
@@ -279,15 +276,15 @@ let addNums = 5;
 addNums = addNums * 2
 console.log(addNums)
 
-addNums *= 2 //shorthand operator
-console.olog(addNums)
+addNums *= 2 // shorthand operator (works for all + -  / * etc)
+console.log(addNums)
 
-//Modulus Operator
-//Checks for remainder of long division
+// Modulus Operator
+// Checks for the remainder of long division
 
 console.log(12 % 5)
 
-//String Concatenation
+// String Concatenation
 
 let fName = "Kiersten";
 let lName = "Gamby"
@@ -297,13 +294,35 @@ console.log(fName, lName)
 let name = "Ms. " + fName + " " + lName
 console.log(name)
 
-//template literal
+// Template literal
 
 let templateLiteralName = `Ms. ${fName} ${lName} is ${20 + 1} years old.`
 console.log(templateLiteralName)
 
-//Multi Line Strings
+// Multi Line Strings
 
-let multiLine = "Once upon a time there was a guy who taught JS \n to students and lied about his age.\n  He has a bulldog named bentley"
+let multiLine = "Once upon a time there was a guy who taught JS \n to students and lied about his age.\n He has a bulldog named Bentley."
 
 console.log(multiLine)
+
+// Challenge
+
+/*
+    Set 7 to 8 variables:
+    fName; lName; houseNumber; aptNumber (if applicable); street; city; state; post code; and concatenate them together to create your address stamp.
+    Assign all of these values to console log to a new variable
+*/
+
+let fiName = "Bryson"
+let laName = "Taeza"
+let hNumber = 120
+let city = "Westchester"
+let state = "PA"
+let postCode = 19320
+
+let myaddress = fiName + " " + laName + "\n" + hNumber + " " + city + ", " + state + " " + postCode
+
+console.log(myaddress)
+
+let myaddres = `${fiName} ${laName} \n ${hNumber} `
+console.log(myaddres)
